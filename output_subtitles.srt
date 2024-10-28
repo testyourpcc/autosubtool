@@ -1,0 +1,256 @@
+1
+00:00:00,000 --> 00:00:05,759
+Chào mừng bạn đến với quản trị Windows Server 2022. Tôi là Kevin Brown và tôi sẽ là người hướng dẫn của bạn cho khóa học này
+
+2
+00:00:05,759 --> 00:00:12,960
+Tôi đã được Microsoft chứng nhận từ Windows NT4 vào cuối những năm 1990
+
+3
+00:00:12,960 --> 00:00:16,920
+Bây giờ tôi đã thực sự là một huấn luyện viên được Microsoft chứng nhận kể từ năm 2000
+
+4
+00:00:19,320 --> 00:00:25,519
+Trong khóa học này, tôi sẽ chỉ cho bạn cách thiết lập toàn bộ doanh nghiệp Microsoft như bạn sẽ tìm thấy trong môi trường doanh nghiệp
+
+5
+00:00:26,160 --> 00:00:29,000
+Chúng ta sẽ bắt đầu với Windows Server 2022
+
+6
+00:00:29,280 --> 00:00:32,159
+Tôi sẽ chỉ cho bạn cách cài đặt hệ điều hành
+
+7
+00:00:32,159 --> 00:00:37,659
+Chúng ta sẽ xem xét các yêu cầu đối với hệ điều hành, các tùy chọn triển khai từ đó
+
+8
+00:00:38,560 --> 00:00:40,920
+Chúng ta sẽ chuyển sang thư mục hoạt động
+
+9
+00:00:40,920 --> 00:00:45,240
+Điều này cho phép chúng tôi tạo một môi trường miền để tôi có thể xác định các nhóm người dùng
+
+10
+00:00:45,760 --> 00:00:50,560
+Tài khoản máy tính trong chính môi trường để tôi có thể quản lý tập trung tất cả những thứ đó
+
+11
+00:00:51,280 --> 00:00:54,920
+Sau khi chúng tôi đã đề cập đến thư mục hoạt động, chúng tôi sẽ chuyển sang chính sách nhóm
+
+12
+00:00:55,359 --> 00:01:02,500
+Điều này cho phép tôi xác định hơn 3000 chính sách mà tôi thực sự có thể sử dụng để quản lý máy tính của mình, người dùng của tôi
+
+13
+00:01:02,719 --> 00:01:08,760
+Vì vậy, bất cứ điều gì từ việc kiểm soát hình nền trên máy tính của bạn đến yêu cầu mật khẩu tối thiểu của bạn
+
+14
+00:01:09,120 --> 00:01:11,120
+kiểm soát cài đặt trên máy tính của bạn và
+
+15
+00:01:11,680 --> 00:01:15,159
+Có thể xác định hàng nghìn cài đặt khác trong chính sách nhóm đó
+
+16
+00:01:17,920 --> 00:01:24,560
+Tôi cũng đề cập đến cách thiết lập mạng khu vực lưu trữ để bạn có thể có các kho lưu trữ khổng lồ này trong môi trường của mình
+
+17
+00:01:24,560 --> 00:01:30,040
+Điều đó cho phép bạn lưu trữ dữ liệu của mình và cách làm cho dữ liệu đó trở nên dư thừa để bạn không có một điểm thất bại nào
+
+18
+00:01:31,680 --> 00:01:35,040
+Mọi môi trường mà bạn thấy mình sẽ sử dụng máy ảo
+
+19
+00:01:35,320 --> 00:01:41,680
+Đó là khả năng lấy một máy chủ vật lý và trên một máy chủ đó bạn có thể tạo các máy ảo này
+
+20
+00:01:41,840 --> 00:01:44,439
+Cái nào hoạt động như các máy chủ độc lập của riêng họ?
+
+21
+00:01:44,439 --> 00:01:47,760
+Vì vậy, một phần cứng vật lý có thể cho phép bạn chạy
+
+22
+00:01:47,760 --> 00:01:54,719
+hai ba bốn thậm chí hàng chục máy ảo để giúp bạn giảm chi phí tổng thể cho phần cứng
+
+23
+00:01:55,359 --> 00:02:00,560
+Và nó cũng đảm bảo bạn có thể tối đa hóa tài nguyên của mình như bộ nhớ lưu trữ CPU
+
+24
+00:02:00,760 --> 00:02:04,560
+Bởi vì bạn chỉ cần chạy các máy ảo và chúng chia sẻ tất cả các tài nguyên đó
+
+25
+00:02:05,400 --> 00:02:08,719
+Mọi môi trường bạn thấy mình cũng sẽ triển khai các máy chủ tệp
+
+26
+00:02:08,800 --> 00:02:13,480
+Vì vậy, tôi sẽ chỉ cho bạn cách chúng tôi có thể triển khai máy chủ tệp và các tùy chọn cấu hình
+
+27
+00:02:13,560 --> 00:02:19,319
+Vì vậy, nếu tôi muốn áp dụng giới hạn về lượng dữ liệu có thể được lưu vào máy chủ tệp hoặc vào một số thư mục nhất định
+
+28
+00:02:19,319 --> 00:02:21,879
+Nếu tôi muốn giới hạn loại dữ liệu có thể được lưu
+
+29
+00:02:21,879 --> 00:02:24,959
+Tôi sẽ chỉ cho bạn cách chặn dữ liệu dựa trên phần mở rộng tệp
+
+30
+00:02:24,959 --> 00:02:30,799
+Vì vậy, nếu tôi không muốn bạn lưu video hoặc tệp âm thanh, điều đó thực sự có thể được quản lý như thế nào
+
+31
+00:02:31,280 --> 00:02:33,280
+Ngoài những cấu hình đó
+
+32
+00:02:33,280 --> 00:02:39,199
+Tôi cũng chỉ cho bạn cách định cấu hình giao thức cấu hình máy chủ động được gọi là DHCP
+
+33
+00:02:39,560 --> 00:02:44,159
+Đó là khả năng tự động gán địa chỉ IP cho các thiết bị trên mạng của bạn
+
+34
+00:02:44,319 --> 00:02:47,479
+Chúng tôi cũng bao gồm DNS hệ thống tên miền
+
+35
+00:02:47,959 --> 00:02:52,399
+Điều này mang lại cho tôi khả năng phân giải tên thành địa chỉ IP
+
+36
+00:02:52,959 --> 00:02:57,439
+Cực kỳ quan trọng cho dù bạn đang ở trên mạng gia đình, mạng doanh nghiệp của bạn
+
+37
+00:02:57,759 --> 00:03:04,280
+DNS phải tồn tại trên mọi mạng và thực sự là một yêu cầu để thư mục hoạt động thậm chí được cài đặt trong môi trường của bạn
+
+38
+00:03:05,159 --> 00:03:11,680
+Tất cả các môi trường sẽ áp dụng các bản cập nhật cho hệ điều hành của họ cho dù bạn đang nói về Windows 10, Windows 11 hay
+
+39
+00:03:11,960 --> 00:03:17,960
+Một trong những hệ điều hành máy chủ Windows Microsoft liên tục phát hành bản cập nhật cho các hệ điều hành này
+
+40
+00:03:18,199 --> 00:03:22,560
+Một số trong số này có thể là các bản cập nhật tính năng mới, một số có thể là các bản cập nhật quan trọng
+
+41
+00:03:22,680 --> 00:03:27,599
+Một số có thể liên quan đến bảo mật để giải quyết một số lỗ hổng đã được phát hiện vì vậy điều quan trọng
+
+42
+00:03:27,599 --> 00:03:29,599
+Về cơ bản, chúng ta có một cách để quản lý những
+
+43
+00:03:29,759 --> 00:03:35,639
+Nếu bạn đang sử dụng mạng gia đình, bạn chỉ cần đi qua máy tính và cài đặt các bản cập nhật trên một máy tính của mình
+
+44
+00:03:35,719 --> 00:03:38,159
+Vâng, nếu tôi đang ở trên một mạng với hàng ngàn máy tính
+
+45
+00:03:38,159 --> 00:03:42,439
+Không có cách nào để tôi quản lý riêng điều đó từ máy tính này sang máy tính khác
+
+46
+00:03:42,680 --> 00:03:48,579
+Vì vậy, WSUS của Microsoft cho phép tôi tải xuống các bản cập nhật từ trang web cập nhật của Microsoft
+
+47
+00:03:48,879 --> 00:03:54,519
+Lưu trữ chúng cục bộ trên máy chủ WSUS ngay bây giờ. Đó là một lựa chọn khả thi khi chúng tôi triển khai WSUS
+
+48
+00:03:54,519 --> 00:03:57,799
+Nhưng tôi có thể lưu trữ các bản cập nhật đó cục bộ trên máy chủ WSUS của mình
+
+49
+00:03:57,800 --> 00:04:04,600
+Sau đó, tôi có thể xem qua và kiểm tra các cập nhật đó để đảm bảo chúng không có tác động tiêu cực đến bất kỳ khách hàng nào trong mạng lưới của tôi
+
+50
+00:04:05,200 --> 00:04:06,719
+Sau khi tôi hoàn thành bài kiểm tra đó
+
+51
+00:04:06,719 --> 00:04:13,120
+Tôi có thể chọn phê duyệt các bản cập nhật đó và xác định máy tính nào. Có lẽ đó là tất cả có lẽ đó chỉ là một tập hợp con
+
+52
+00:04:13,280 --> 00:04:19,879
+Nhưng những máy tính nào mà những bản cập nhật đó thực sự nên được cài đặt trên đó, vì vậy mang lại cho tôi sự quản trị tập trung trên tất cả
+
+53
+00:04:20,240 --> 00:04:22,480
+Các bản cập nhật Windows mà chúng tôi triển khai trong môi trường của mình
+
+54
+00:04:23,360 --> 00:04:30,640
+Tôi cũng có một mô-đun dành riêng cho cụm chuyển đổi dự phòng nếu tôi đang triển khai một máy chủ tệp hoặc nhiều loại máy chủ khác và
+
+55
+00:04:30,759 --> 00:04:35,000
+Các dịch vụ trong môi trường. Tôi phải đảm bảo những dịch vụ đó có tính khả dụng cao
+
+56
+00:04:35,000 --> 00:04:40,640
+Tôi không thể có một điểm thất bại duy nhất, một ví dụ sẽ là một máy chủ tệp trong môi trường của tôi
+
+57
+00:04:40,640 --> 00:04:43,640
+Nếu tôi có một máy chủ tệp mà người dùng phụ thuộc vào để thực hiện công việc của họ
+
+58
+00:04:43,640 --> 00:04:49,319
+Có nghĩa là họ không thể thực hiện công việc của mình nếu họ không thể truy cập một số thư mục được chia sẻ nhất định trên máy chủ tệp
+
+59
+00:04:49,480 --> 00:04:56,439
+Nếu đó là sự thật, thì tôi không thể để máy chủ tệp đó ngoại tuyến nếu đây chỉ là một máy chủ tệp duy nhất
+
+60
+00:04:56,439 --> 00:05:02,439
+Đó chắc chắn là một khả năng bạn có thể gặp lỗi phần mềm ở cấp hệ điều hành hoặc lỗi phần cứng
+
+61
+00:05:02,600 --> 00:05:08,439
+Vì vậy, với cụm chuyển đổi dự phòng, tôi có thể có nhiều máy chủ mà chúng tôi gọi là các nút trong cụm chuyển đổi dự phòng
+
+62
+00:05:08,439 --> 00:05:11,360
+Và chúng ta có thể định cấu hình chúng để hoạt động kết hợp với nhau
+
+63
+00:05:11,360 --> 00:05:17,360
+Vì vậy, nếu một máy chủ không thành công, hệ điều hành không thành công, phần cứng không thành công, chúng tôi sẽ không bị ảnh hưởng
+
+64
+00:05:17,439 --> 00:05:20,639
+Chúng tôi có một máy chủ khác có quyền truy cập vào cùng một bộ dữ liệu đó
+

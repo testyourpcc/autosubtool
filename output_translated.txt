@@ -1,0 +1,100 @@
+Chào mừng bạn đến với quản trị Windows Server 2022. Tôi là Kevin Brown và tôi sẽ là người hướng dẫn của bạn cho khóa học này
+Tôi đã được Microsoft chứng nhận từ Windows NT4 vào cuối những năm 1990
+Bây giờ tôi đã thực sự là một huấn luyện viên được Microsoft chứng nhận kể từ năm 2000
+Trong khóa học này, tôi sẽ chỉ cho bạn cách thiết lập toàn bộ doanh nghiệp Microsoft như bạn sẽ tìm thấy trong môi trường doanh nghiệp
+Chúng ta sẽ bắt đầu với Windows Server 2022
+Tôi sẽ chỉ cho bạn cách cài đặt hệ điều hành
+Chúng ta sẽ xem xét các yêu cầu đối với hệ điều hành, các tùy chọn triển khai từ đó
+Chúng ta sẽ chuyển sang thư mục hoạt động
+Điều này cho phép chúng tôi tạo một môi trường miền để tôi có thể xác định các nhóm người dùng
+Tài khoản máy tính trong chính môi trường để tôi có thể quản lý tập trung tất cả những thứ đó
+Sau khi chúng tôi đã đề cập đến thư mục hoạt động, chúng tôi sẽ chuyển sang chính sách nhóm
+Điều này cho phép tôi xác định hơn 3000 chính sách mà tôi thực sự có thể sử dụng để quản lý máy tính của mình, người dùng của tôi
+Vì vậy, bất cứ điều gì từ việc kiểm soát hình nền trên máy tính của bạn đến yêu cầu mật khẩu tối thiểu của bạn
+kiểm soát cài đặt trên máy tính của bạn và
+Có thể xác định hàng nghìn cài đặt khác trong chính sách nhóm đó
+Tôi cũng đề cập đến cách thiết lập mạng khu vực lưu trữ để bạn có thể có các kho lưu trữ khổng lồ này trong môi trường của mình
+Điều đó cho phép bạn lưu trữ dữ liệu của mình và cách làm cho dữ liệu đó trở nên dư thừa để bạn không có một điểm thất bại nào
+Mọi môi trường mà bạn thấy mình sẽ sử dụng máy ảo
+Đó là khả năng lấy một máy chủ vật lý và trên một máy chủ đó bạn có thể tạo các máy ảo này
+Cái nào hoạt động như các máy chủ độc lập của riêng họ?
+Vì vậy, một phần cứng vật lý có thể cho phép bạn chạy
+hai ba bốn thậm chí hàng chục máy ảo để giúp bạn giảm chi phí tổng thể cho phần cứng
+Và nó cũng đảm bảo bạn có thể tối đa hóa tài nguyên của mình như bộ nhớ lưu trữ CPU
+Bởi vì bạn chỉ cần chạy các máy ảo và chúng chia sẻ tất cả các tài nguyên đó
+Mọi môi trường bạn thấy mình cũng sẽ triển khai các máy chủ tệp
+Vì vậy, tôi sẽ chỉ cho bạn cách chúng tôi có thể triển khai máy chủ tệp và các tùy chọn cấu hình
+Vì vậy, nếu tôi muốn áp dụng giới hạn về lượng dữ liệu có thể được lưu vào máy chủ tệp hoặc vào một số thư mục nhất định
+Nếu tôi muốn giới hạn loại dữ liệu có thể được lưu
+Tôi sẽ chỉ cho bạn cách chặn dữ liệu dựa trên phần mở rộng tệp
+Vì vậy, nếu tôi không muốn bạn lưu video hoặc tệp âm thanh, điều đó thực sự có thể được quản lý như thế nào
+Ngoài những cấu hình đó
+Tôi cũng chỉ cho bạn cách định cấu hình giao thức cấu hình máy chủ động được gọi là DHCP
+Đó là khả năng tự động gán địa chỉ IP cho các thiết bị trên mạng của bạn
+Chúng tôi cũng bao gồm DNS hệ thống tên miền
+Điều này mang lại cho tôi khả năng phân giải tên thành địa chỉ IP
+Cực kỳ quan trọng cho dù bạn đang ở trên mạng gia đình, mạng doanh nghiệp của bạn
+DNS phải tồn tại trên mọi mạng và thực sự là một yêu cầu để thư mục hoạt động thậm chí được cài đặt trong môi trường của bạn
+Tất cả các môi trường sẽ áp dụng các bản cập nhật cho hệ điều hành của họ cho dù bạn đang nói về Windows 10, Windows 11 hay
+Một trong những hệ điều hành máy chủ Windows Microsoft liên tục phát hành bản cập nhật cho các hệ điều hành này
+Một số trong số này có thể là các bản cập nhật tính năng mới, một số có thể là các bản cập nhật quan trọng
+Một số có thể liên quan đến bảo mật để giải quyết một số lỗ hổng đã được phát hiện vì vậy điều quan trọng
+Về cơ bản, chúng ta có một cách để quản lý những
+Nếu bạn đang sử dụng mạng gia đình, bạn chỉ cần đi qua máy tính và cài đặt các bản cập nhật trên một máy tính của mình
+Vâng, nếu tôi đang ở trên một mạng với hàng ngàn máy tính
+Không có cách nào để tôi quản lý riêng điều đó từ máy tính này sang máy tính khác
+Vì vậy, WSUS của Microsoft cho phép tôi tải xuống các bản cập nhật từ trang web cập nhật của Microsoft
+Lưu trữ chúng cục bộ trên máy chủ WSUS ngay bây giờ. Đó là một lựa chọn khả thi khi chúng tôi triển khai WSUS
+Nhưng tôi có thể lưu trữ các bản cập nhật đó cục bộ trên máy chủ WSUS của mình
+Sau đó, tôi có thể xem qua và kiểm tra các cập nhật đó để đảm bảo chúng không có tác động tiêu cực đến bất kỳ khách hàng nào trong mạng lưới của tôi
+Sau khi tôi hoàn thành bài kiểm tra đó
+Tôi có thể chọn phê duyệt các bản cập nhật đó và xác định máy tính nào. Có lẽ đó là tất cả có lẽ đó chỉ là một tập hợp con
+Nhưng những máy tính nào mà những bản cập nhật đó thực sự nên được cài đặt trên đó, vì vậy mang lại cho tôi sự quản trị tập trung trên tất cả
+Các bản cập nhật Windows mà chúng tôi triển khai trong môi trường của mình
+Tôi cũng có một mô-đun dành riêng cho cụm chuyển đổi dự phòng nếu tôi đang triển khai một máy chủ tệp hoặc nhiều loại máy chủ khác và
+Các dịch vụ trong môi trường. Tôi phải đảm bảo những dịch vụ đó có tính khả dụng cao
+Tôi không thể có một điểm thất bại duy nhất, một ví dụ sẽ là một máy chủ tệp trong môi trường của tôi
+Nếu tôi có một máy chủ tệp mà người dùng phụ thuộc vào để thực hiện công việc của họ
+Có nghĩa là họ không thể thực hiện công việc của mình nếu họ không thể truy cập một số thư mục được chia sẻ nhất định trên máy chủ tệp
+Nếu đó là sự thật, thì tôi không thể để máy chủ tệp đó ngoại tuyến nếu đây chỉ là một máy chủ tệp duy nhất
+Đó chắc chắn là một khả năng bạn có thể gặp lỗi phần mềm ở cấp hệ điều hành hoặc lỗi phần cứng
+Vì vậy, với cụm chuyển đổi dự phòng, tôi có thể có nhiều máy chủ mà chúng tôi gọi là các nút trong cụm chuyển đổi dự phòng
+Và chúng ta có thể định cấu hình chúng để hoạt động kết hợp với nhau
+Vì vậy, nếu một máy chủ không thành công, hệ điều hành không thành công, phần cứng không thành công, chúng tôi sẽ không bị ảnh hưởng
+Chúng tôi có một máy chủ khác có quyền truy cập vào cùng một bộ dữ liệu đó
+Vì vậy, người dùng của tôi sẽ hoàn toàn không biết rằng đã có bất kỳ loại lỗi nào và họ vẫn có thể tiếp tục truy cập
+Chúng ta cũng phải chuẩn bị cho điều tồi tệ nhất có thể xảy ra
+Mặc dù chúng tôi hy vọng thất bại không bao giờ xảy ra đôi khi họ làm đôi khi nó không thể tránh khỏi
+Vì vậy, chúng tôi cũng sẽ đề cập đến khôi phục thảm họa, khả năng sao lưu và khôi phục nguyên bản được tích hợp trong máy chủ Windows
+Vì vậy, chúng ta sẽ xem xét các lựa chọn cho điều đó
+Tôi cũng bao gồm quyền truy cập từ xa, nhiều môi trường có một số loại kết nối mạng riêng ảo
+Vì vậy, người dùng nếu họ đang đi du lịch hoặc nếu họ cần làm việc tại nhà
+Họ có thể kết nối an toàn trực tiếp qua internet trở lại văn phòng công ty và họ có thể truy cập các tài nguyên như máy chủ tệp
+Máy chủ ứng dụng từ mọi nơi trên thế giới
+Vì vậy, cuối cùng bạn duyệt mạng doanh nghiệp của chúng tôi từ nhà của bạn giống như bạn đang ở trong văn phòng
+Chúng ta sẽ đi qua những nhược điểm của nhiều mối quan tâm liên quan đến việc chúng ta sẽ triển khai một
+Giải pháp VPN và chúng ta sẽ xem xét các giao thức xác thực, các giao thức đường hầm và thảo luận về ưu và nhược điểm của từng giao thức đó
+Một công nghệ
+Không thể tránh khỏi đối với thực tế tất cả mọi người bây giờ là đám mây
+Vì vậy, tôi có những gì tôi coi là một phần thưởng vì nó không trực tiếp là Windows Server 2022
+Tôi đã thêm một mô-đun bao gồm Microsoft Azure là công nghệ đám mây của Microsoft và mô-đun Azure này
+Chúng ta sẽ xem xét
+ID nội bộ tương đương với đám mây của các dịch vụ miền thư mục hoạt động mà bạn sẽ có trong môi trường tại chỗ của mình
+Vì vậy, chúng ta sẽ xem cách chúng ta có thể tạo người dùng, cách chúng ta có thể xác định các thiết bị, cách chúng ta có thể tạo các nhóm trong chính Azure
+Tôi cũng sẽ hướng dẫn thực hiện đầy đủ việc sử dụng thư mục hoạt động tại chỗ của mình với người dùng và tài khoản máy tính và các nhóm và
+Cách kết nối với Microsoft Azure để các đối tượng có thể đồng bộ hóa giữa môi trường tại chỗ của bạn và giữa đám mây
+Tôi cũng đã đề cập đến việc triển khai các máy ảo trong Azure
+Rất giống với việc có các máy tại chỗ trong môi trường ảo của bạn
+Bạn cũng có thể chạy các máy ảo trên đám mây mà bạn chỉ cần đăng nhập vào các máy ảo đó thông qua máy tính từ xa
+Giống như bạn làm trong môi trường tại chỗ của mình và bạn hoàn toàn có thể định cấu hình các máy chủ đó giống như cách bạn định cấu hình
+Bất kỳ máy chủ nào khác mà bạn sẽ có trong môi trường tại chỗ của mình
+Hầu hết các môi trường cũng sử dụng Microsoft 365
+Microsoft 365 tích hợp nhiều vào Azure và nó cũng tích hợp nhiều vào môi trường tại chỗ của bạn
+Vì vậy, chúng ta cũng sẽ xem xét sự tích hợp giữa thư mục hoạt động trong môi trường tại chỗ và Microsoft 365
+Lý do tôi coi những nội dung đó là nội dung bổ sung là vì chúng không phải là một phần trực tiếp của Windows Server
+2022 nhưng chúng cực kỳ quan trọng và có lợi cho mọi người để biết nếu bạn đã làm việc trên đám mây nếu bạn không
+Hiện đang làm việc với đám mây. Rất có khả năng trong tương lai gần, bạn sẽ có được những thông tin tuyệt vời
+Khi bạn đã hoàn thành khóa học này, bạn sẽ hiểu đầy đủ cách tất cả các khái niệm này hoạt động với nhau và
+Chính xác cách chúng được định cấu hình mọi thứ trong khóa học này mà tôi đề cập
+Tôi cũng sẽ trình bày cấu hình thực tế
+Vì vậy, đây sẽ không chỉ là một khóa học dựa trên lý thuyết. Bạn sẽ thấy việc triển khai cho mọi chủ đề mà chúng tôi đề cập
